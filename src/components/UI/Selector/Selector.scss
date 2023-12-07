@@ -37,5 +37,10 @@
         option {
             background-color: $additional-accent-color;
         }
+        &:disabled {
+            color: #949494;
+            opacity: 0.5;
+            cursor: auto;
+        }
     }
 }

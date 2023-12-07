@@ -45,7 +45,7 @@ const Exchanger = ({ currencies, valueFrom, setValueFrom, valueTo, setValueTo, u
                         value={valueTo}
                         onChange={setValueTo}
                         disabled={!valueFrom}
-                        disabledString='сначала выберите валюту к обмену'
+                        disabledString='предыдущее поле'
                         currencies={currencies}
                         label='Выберите что получаете'
                     />

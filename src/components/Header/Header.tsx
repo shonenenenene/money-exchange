@@ -11,6 +11,7 @@ import { useRef } from 'react';
 import { EffectComposer, Noise } from '@react-three/postprocessing';
 import { BlendFunction } from 'postprocessing';
 import textures from '../../assets/textures';
+
 extend({ TextGeometry });
 declare module '@react-three/fiber' {
     interface ThreeElements {
@@ -78,7 +79,7 @@ const Header = () => {
     return (
         <header className='header'>
             <LoadingHeader />
-            <Suspense fallback={<></>}>
+            <Suspense fallback={<div className='logo-loader'></div>}>
                 <Canvas camera={{ position: [0, 0, 3.8], filmOffset: -80 }}>
                     <Mesh />
                 </Canvas>

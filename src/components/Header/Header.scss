@@ -2,6 +2,7 @@
 
 .header {
     z-index: 999;
+
     canvas {
         z-index: -4;
     }
@@ -23,6 +24,35 @@
             font-size: 30px;
             z-index: 1;
             height: 100%;
+        }
+    }
+    .logo-loader {
+        width: 100%;
+        height: 3px;
+        display: block;
+        background-color: $additional-main-color;
+        background-image: linear-gradient(
+            45deg,
+            rgb(106, 99, 134) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(106, 99, 134) 50%,
+            rgba(106, 99, 134) 75%,
+            transparent 75%,
+            transparent
+        );
+        font-size: 30px;
+        background-size: 1em 1em;
+        box-sizing: border-box;
+        animation: barStripe 1s linear infinite;
+
+        @keyframes barStripe {
+            0% {
+                background-position: 1em 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
         }
     }
 }
