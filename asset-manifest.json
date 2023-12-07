@@ -1,13 +1,19 @@
 {
   "files": {
-    "main.css": "/money-exchange/static/css/main.dfd051b2.css",
-    "main.js": "/money-exchange/static/js/main.02fe5439.js",
+    "main.css": "/money-exchange/static/css/main.8b4dd037.css",
+    "main.js": "/money-exchange/static/js/main.862643f0.js",
+    "static/media/nx.png": "/money-exchange/static/media/nx.3faf0fd6e9e5ff64d04f.png",
+    "static/media/ny.png": "/money-exchange/static/media/ny.0e90abf56a0a5fa85ef5.png",
+    "static/media/pz.png": "/money-exchange/static/media/pz.625db184955530007de7.png",
+    "static/media/py.png": "/money-exchange/static/media/py.34e340e87c6e8c2c719c.png",
+    "static/media/nz.png": "/money-exchange/static/media/nz.50c7c476e74f3a992a2e.png",
+    "static/media/px.png": "/money-exchange/static/media/px.5a863149ebba5d13365f.png",
     "index.html": "/money-exchange/index.html",
-    "main.dfd051b2.css.map": "/money-exchange/static/css/main.dfd051b2.css.map",
-    "main.02fe5439.js.map": "/money-exchange/static/js/main.02fe5439.js.map"
+    "main.8b4dd037.css.map": "/money-exchange/static/css/main.8b4dd037.css.map",
+    "main.862643f0.js.map": "/money-exchange/static/js/main.862643f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.dfd051b2.css",
-    "static/js/main.02fe5439.js"
+    "static/css/main.8b4dd037.css",
+    "static/js/main.862643f0.js"
   ]
 }
