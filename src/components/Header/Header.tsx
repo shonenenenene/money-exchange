@@ -10,6 +10,7 @@ import * as pixelFont from '../../assets/fonts/IBM.json';
 import { useRef } from 'react';
 import { EffectComposer, Noise } from '@react-three/postprocessing';
 import { BlendFunction } from 'postprocessing';
+import textures from '../../assets/textures';
 extend({ TextGeometry });
 declare module '@react-three/fiber' {
     interface ThreeElements {
@@ -40,16 +41,16 @@ const Mesh = () => {
         height: 2,
     };
 
-    const goldTexture = useCubeTexture(['/px.png', '/nx.png', '/py.png', '/ny.png', '/pz.png', '/nz.png'], {
-        path: '../../../textures',
+    const goldTexture = useCubeTexture([textures.px, textures.nx, textures.py, textures.ny, textures.pz, textures.nz], {
+        path: '',
     });
 
     return (
         <>
             <ambientLight />
             <Clouds material={THREE.MeshBasicMaterial}>
-                <Cloud segments={12} bounds={[20, 2, 2]} volume={2} color='#9386c9' />
-                <Cloud seed={1} scale={2} volume={5} color='hotpink' fade={100} />
+                <Cloud segments={12} bounds={[20, 2, 2]} volume={1.2} color='#9386c9' />
+                <Cloud seed={1} scale={2} volume={3} color='hotpink' fade={100} />
             </Clouds>
             <pointLight position={[5, 5, 5]} intensity={1} />
             <pointLight position={[-3, -3, 3]} intensity={1} />
@@ -78,7 +79,7 @@ const Header = () => {
         <header className='header'>
             <LoadingHeader />
             <Suspense fallback={<></>}>
-                <Canvas camera={{ position: [0, 0, 3.8] }}>
+                <Canvas camera={{ position: [0, 0, 3.8], filmOffset: -80 }}>
                     <Mesh />
                 </Canvas>
             </Suspense>

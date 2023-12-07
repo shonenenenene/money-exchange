@@ -2,6 +2,7 @@ import React from 'react';
 import './Exchanger.scss';
 import Selector from '../UI/Selector/Selector';
 import { ICurrency } from '../../types';
+import { ExchangeIcon } from '../../assets/icons';
 
 interface ExchangerProps {
     currencies: ICurrency[];
@@ -36,7 +37,7 @@ const Exchanger = ({ currencies, valueFrom, setValueFrom, valueTo, setValueTo, u
                         label='Выберите что отдаете'
                     />
                     <div className='exchanger-icon'>
-                        <img draggable={false} src='/exchange-icon.png' alt='exchanger-icon' />
+                        <img draggable={false} src={ExchangeIcon} alt='exchanger-icon' />
                     </div>
                     <Selector
                         setUrl={setUrl}
