@@ -1,0 +1,37 @@
+@import '../App/App.scss';
+
+.exchangers {
+    animation: appear 0.4s ease 0.1s 1 normal both;
+    .exchangers-item {
+        min-height: 140px;
+        background-color: $additional-accent-color-light;
+        margin: 10px;
+        padding: 14px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 24px;
+        .exchanger-count {
+            font-weight: 600;
+            span {
+                font-weight: 300;
+                background-color: $bg-color;
+                padding: 4px;
+            }
+        }
+        .exchanger-link {
+            text-align: center;
+            border: 1px solid #000;
+            padding: 12px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: $main-color;
+            &:hover {
+                box-shadow: 0px 6px 25px -2px $additional-accent-color;
+                transition: all 0.3s ease-in-out 0s;
+            }
+        }
+    }
+}

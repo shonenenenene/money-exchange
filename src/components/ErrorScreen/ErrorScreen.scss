@@ -1,0 +1,10 @@
+@import '../App/App.scss';
+
+.error {
+    font-family: $titles-font;
+    font-size: 40px;
+    margin-top: 200px;
+    text-align: center;
+    min-width: 310px;
+    animation: appear 0.4s ease 0.1s 1 normal both;
+}

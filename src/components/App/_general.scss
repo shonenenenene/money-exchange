@@ -1,0 +1,33 @@
+@import './variables';
+
+body {
+    font-family: $common-font, $cyrillic-font;
+    font-size: 20px;
+    background-color: $bg-color;
+}
+
+.container {
+    max-width: 800px;
+    padding: 0 10px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 310px;
+}
+
+.App {
+    position: relative;
+    @keyframes appear {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-family: $titles-font;
+}

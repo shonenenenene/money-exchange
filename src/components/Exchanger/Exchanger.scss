@@ -1,0 +1,112 @@
+@import '../App/App.scss';
+
+.exchanger {
+    background-color: $main-accent-color;
+    color: $additional-main-color;
+    padding: 15px;
+    border-radius: 10px;
+    animation: appear 0.4s ease 0.1s 1 normal both;
+
+    .exchanger-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        min-height: 100px;
+
+        .exchanger-selectors {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            .exchanger-icon {
+                width: 30px;
+                margin: 4px;
+            }
+            @media (max-width: 690px) {
+                flex-direction: column;
+                .exchanger-icon {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .exchanger-button {
+            font-family: $cyrillic-font;
+            border-radius: 10px;
+            font-size: 20px;
+            letter-spacing: 1.3px;
+            padding: 12px 20px;
+            background-color: $additional-accent-color;
+            margin: 30px 50px 0 50px;
+            width: 260px;
+            align-self: center;
+            background: $additional-accent-color;
+            border: none;
+            border-radius: 1000px;
+            box-shadow: 0px 6px 25px -2px $additional-accent-color;
+            transition: all 0.3s ease-in-out 0s;
+            position: relative;
+            padding: 10px;
+            animation: appear 0.4s ease 0.1s 1 normal both;
+        }
+
+        button::before {
+            content: '';
+            border-radius: 1000px;
+            min-width: 260px;
+            min-height: 40px;
+            box-shadow: 0 0 60px rgba(147, 149, 236, 0.64);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        .button:hover,
+        .button:focus {
+            color: #313133;
+            transform: translateY(-6px);
+        }
+
+        button:hover::before,
+        button:focus::before {
+            opacity: 1;
+        }
+
+        button::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            border: 6px solid rgb(147, 149, 236);
+            position: absolute;
+            z-index: -5;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: ring 1.5s infinite;
+        }
+
+        button:hover::after,
+        button:focus::after {
+            animation: none;
+            display: none;
+        }
+
+        @keyframes ring {
+            0% {
+                width: 30px;
+                height: 30px;
+                opacity: 0.14;
+            }
+            100% {
+                width: 150px;
+                height: 150px;
+                opacity: 0;
+            }
+        }
+    }
+}

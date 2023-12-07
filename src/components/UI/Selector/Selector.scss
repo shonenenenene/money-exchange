@@ -1,0 +1,41 @@
+@import '../../App/App.scss';
+
+.selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    label {
+        font-size: 18px;
+        margin: 8px;
+        font-weight: lighter;
+        font-family: $cyrillic-font;
+        font-weight: 200;
+        cursor: auto;
+    }
+    select {
+        cursor: pointer;
+        font-family: $common-font, $cyrillic-font;
+        appearance: none;
+        font-weight: 300;
+        width: 280px;
+        height: 50px;
+        border-radius: 10px;
+        color: $main-color;
+        padding: 2px 60px 2px 16px;
+        background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 1em
+                center / 1em,
+            linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
+        color: $additional-main-color;
+        border-radius: 0.25em;
+        box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+        &::-ms-expand {
+            display: none;
+        }
+        &:focus {
+            outline: none;
+        }
+        option {
+            background-color: $additional-accent-color;
+        }
+    }
+}
