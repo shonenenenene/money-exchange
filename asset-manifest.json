@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/money-exchange/static/css/main.dfd051b2.css",
+    "main.js": "/money-exchange/static/js/main.02fe5439.js",
+    "index.html": "/money-exchange/index.html",
+    "main.dfd051b2.css.map": "/money-exchange/static/css/main.dfd051b2.css.map",
+    "main.02fe5439.js.map": "/money-exchange/static/js/main.02fe5439.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dfd051b2.css",
+    "static/js/main.02fe5439.js"
+  ]
+}
