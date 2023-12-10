@@ -27,15 +27,16 @@ const Directions = ({ exchangers }: DirectionsProps) => {
                         Обменник: <h3>{e.name}</h3>
                     </div>
                     <div className='exchanger-count'>
-                        <div>
-                            Курс {e.valute_from} к {e.valute_to}: <span>{e.out_count}</span>
+                        <div className='exchanger-value'>
+                            Курс {e.valute_from} к {e.valute_to}: <br />
+                            <div className='value-accent'>{e.out_count}</div>
                         </div>
                         <div>
                             <div>
-                                min: <span>{e.min_amount}</span>
+                                min: <div className='value-accent'>{e.min_amount}</div>
                             </div>
                             <div>
-                                max: <span>{e.max_amount}</span>
+                                max: <div className='value-accent'>{e.max_amount}</div>
                             </div>
                         </div>
                     </div>

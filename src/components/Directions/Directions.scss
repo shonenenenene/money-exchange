@@ -6,19 +6,35 @@
         min-height: 140px;
         background-color: $additional-accent-color-light;
         margin: 10px;
-        padding: 14px;
+        padding: 10px;
         border-radius: 6px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 24px;
+        .exchanger-name {
+            padding: 4px;
+            margin: 6px;
+            width: 140px;
+            background-color: $bg-color;
+            border-radius: 10px;
+        }
         .exchanger-count {
             font-weight: 600;
-            span {
+            flex-grow: 1;
+            .value-accent {
                 font-weight: 300;
                 background-color: $bg-color;
-                padding: 4px;
+                padding: 2px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .exchanger-value {
+                margin: 10px 0;
+                border-radius: 10px;
+                background-color: $additional-accent-color-light;
             }
         }
         .exchanger-link {
@@ -28,6 +44,7 @@
             border-radius: 10px;
             text-decoration: none;
             color: $main-color;
+            background-color: $bg-color;
             &:hover {
                 box-shadow: 0px 6px 25px -2px $additional-accent-color;
                 transition: all 0.3s ease-in-out 0s;

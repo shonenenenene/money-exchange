@@ -50,13 +50,20 @@ const Mesh = () => {
         <>
             <ambientLight />
             <Clouds material={THREE.MeshBasicMaterial}>
-                <Cloud segments={12} bounds={[20, 2, 2]} volume={1.2} color='#9386c9' />
+                <Cloud segments={14} bounds={[20, 2, 2]} volume={3} color='#9386c9' />
                 <Cloud seed={1} scale={2} volume={3} color='hotpink' fade={100} />
             </Clouds>
-            <pointLight position={[5, 5, 5]} intensity={1} />
+            <pointLight position={[5, 5, 5]} intensity={3} />
             <pointLight position={[-3, -3, 3]} intensity={1} />
-            <OrbitControls autoRotate autoRotateSpeed={0.2} enablePan={false} minPolarAngle={Math.PI / 4} maxPolarAngle={Math.PI / 2} />
-            <Sparkles count={50} scale={20} size={6} speed={1} color={'#6a6386'} />
+            <OrbitControls
+                autoRotate
+                autoRotateSpeed={0.4}
+                enablePan={false}
+                enableZoom={false}
+                minPolarAngle={Math.PI / 4}
+                maxPolarAngle={Math.PI / 2}
+            />
+            <Sparkles count={40} scale={20} size={6} speed={1} color={'#6a6386'} />
             <EffectComposer>
                 <Noise premultiply blendFunction={BlendFunction.ADD} opacity={0.2} />
             </EffectComposer>
@@ -68,7 +75,7 @@ const Mesh = () => {
             >
                 <mesh ref={mesh} position={[0, 0, 3]}>
                     <textGeometry attach='geometry' args={['₿', textOptions]} />
-                    <meshBasicMaterial attach='material' envMap={goldTexture} />
+                    <meshBasicMaterial attach='material' envMap={goldTexture} reflectivity={0.98} refractionRatio={0.5} />
                 </mesh>
             </Stage>
         </>
