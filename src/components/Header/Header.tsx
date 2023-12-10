@@ -57,7 +57,7 @@ const Mesh = () => {
             <pointLight position={[-3, -3, 3]} intensity={1} />
             <OrbitControls
                 autoRotate
-                autoRotateSpeed={0.4}
+                autoRotateSpeed={0.3}
                 enablePan={false}
                 enableZoom={false}
                 minPolarAngle={Math.PI / 4}

@@ -9,7 +9,7 @@ interface LoaderProviderProps {
 }
 
 export const LoaderProvider = ({ children, isLoading, isError }: PropsWithChildren<LoaderProviderProps>) => {
-    if (isError) {
+    if (isError && !isLoading) {
         return <ErrorScreen />;
     }
 

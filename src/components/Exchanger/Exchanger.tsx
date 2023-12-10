@@ -26,7 +26,6 @@ const Exchanger = ({ currencies, valueFrom, setValueFrom, valueTo, setValueTo, u
             <form className='exchanger-form' onSubmit={getDirections}>
                 <div className='exchanger-selectors'>
                     <Selector
-                        ignoreId={valueTo}
                         setUrl={setUrl}
                         onChange={(value) => {
                             setValueFrom(value);
